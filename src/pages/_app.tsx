@@ -8,7 +8,6 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      {/* <ToggleTheme toggleTheme={toggleTheme}/> */}
       <Component {...pageProps} />
     </ThemeProvider>
   )
