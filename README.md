@@ -3,10 +3,10 @@
 </h4>
 
 <h1 align="center">
-    🚀 NLW 4
+    🚀 move.it
 </h1>
 
-<p align="center">Aplicação Next Level Week 4ª Edição</p>
+<p align="center">Aplicação desenvolvida durante a NLW4 na trilha de React</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/react%20version-16.8.0-informational"/>
