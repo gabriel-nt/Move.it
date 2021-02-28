@@ -1,34 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h4 align="center">
+  <img src="https://github.com/gabriel-nt/Move.it/blob/main/public/logo-full.svg" alt="logo" height="65"/>
+</h4>
 
-## Getting Started
+<h1 align="center">
+    🚀 NLW 4
+</h1>
 
-First, run the development server:
+<p align="center">Aplicação Next Level Week 4ª Edição</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/react%20version-16.8.0-informational"/>
+  <img src="https://img.shields.io/badge/next%20version-latest-important" />
+  <img src="https://img.shields.io/badge/last%20commit-february-blue" />
+  <img src="https://img.shields.io/badge/license-MIT-success"/>
+</p>
+
+<p align="center">
+  <a href="#-features">Features</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-pré-requisitos">Pré-Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Lincença</a>
+</p>
+
+<h3 align="center"> 
+🚧  Finalizado  🚧
+</h3>
+
+### 📎 Features 
+
+- [x] Cronômetro Pomodoro
+- [x] Desafios disponivéis ao final do cronômetro
+- [x] Notificação disponivel ao final do cronômetro
+- [x] Ao concluir o desafio, ganhe uma quantidade pré-determinada de xp
+- [x] Evolua de level conforme progrida
+
+### 💻 Projeto
+
+O Move.it é uma aplicação baseada na técnica Pomodoro que visa ajudar trabalhadores a aumentar sua produtividade. Dessa forma, a aplicação define 25 minutos de trabalho para uma pausa de 5 minutos para descanso e/ou qualquer outra atividade não vinculada ao trabalho. Esse Projeto foi desenvolvido durante a semana do Next Level Week 4ª Edição. 
+
+### ✅ Demonstração
+<img src="https://github.com/gabriel-nt/Move.it/blob/main/public/home.png" />
+
+### ⚙ Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e/ou [Yarn](https://yarnpkg.com/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 📗 Rodando a Aplicação (web)
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone este repositório
+$ git clone https://github.com/gabriel-nt/Move.it
+
+# Instale as dependências
+$ yarn
+
+# Execute a aplicação
+$ yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🚀 Tecnologias
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- React
+- Typescript
+- Next
+- Node
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 📕 Bibliotecas
 
-## Learn More
+Esse projeto foi utilizou das seguintes lib:
 
-To learn more about Next.js, take a look at the following resources:
+- js-cookie
+- react-dom
+- styled-components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📝 Licença
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Esse projeto está sob a licença MIT.
 
-## Deploy on Vercel
+<hr/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feito por Gabriel Teixeira
