@@ -12,14 +12,14 @@ import ContextProvider from 'hooks';
 interface HomePageProps {
   level: number;
   currentExperience: number;
-  challengesComplete: number;
+  challengesCompleted: number;
 }
 
 const Home = (props: HomePageProps) => {
-  const { level, challengesComplete, currentExperience } = props;
+  const { level, challengesCompleted, currentExperience } = props;
 
   return (
-    <ContextProvider level={level} challengesComplete={challengesComplete} currentExperience={currentExperience}>
+    <ContextProvider level={level} challengesCompleted={challengesCompleted} currentExperience={currentExperience}>
       <Container>
         <Head>
           <title>Inicio | move.it</title>

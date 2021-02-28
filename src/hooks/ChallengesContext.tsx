@@ -26,7 +26,7 @@ interface ChallengeProps {
 interface ChallengesProviderProps {
   level: number;
   currentExperience: number;
-  challengesComplete: number;
+  challengesCompleted: number;
 }
 
 export const ChallengesContext = createContext({} as ChallengeContextData);
@@ -34,7 +34,7 @@ export const ChallengesContext = createContext({} as ChallengeContextData);
 export const ChallengesProvider: React.FC<ChallengesProviderProps> = ({ children, ...rest }) => {
   const [level, setLevel] = useState(rest.level ?? 1);
   const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
-  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesComplete ?? 0);
+  const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
 
   const [activeChallenge, setActiveChallenge] = useState<ChallengeProps>();

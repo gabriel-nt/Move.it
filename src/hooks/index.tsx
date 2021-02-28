@@ -4,7 +4,7 @@ import { CountdownProvider } from './CountdownContext';
 interface ContextProps {
   level: number;
   currentExperience: number;
-  challengesComplete: number;
+  challengesCompleted: number;
 }
 
 const ContextProvider: React.FC<ContextProps> = ({ children, ...props }) => (
