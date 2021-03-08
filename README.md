@@ -33,6 +33,11 @@
 - [x] Notificação disponivel ao final do cronômetro
 - [x] Ao concluir o desafio, ganhe uma quantidade pré-determinada de xp
 - [x] Evolua de level conforme progrida
+- [x] Tela de login com usuário do github
+- [x] Tema dark/light
+- [x] Animações com framer-motion
+- [x] Criação de sidebar 
+- [x] Tela de últimos desafios concluídos   
 
 ### 💻 Projeto
 
@@ -73,6 +78,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Esse projeto foi utilizou das seguintes lib:
 
+- Eslint
+- framer-motion
+- prettier
 - js-cookie
 - react-dom
 - styled-components
