@@ -84,6 +84,7 @@ Esse projeto foi utilizou das seguintes lib:
 - js-cookie
 - react-dom
 - styled-components
+- babel-plugin-inline-react-svg
 
 ### 📝 Licença
 
