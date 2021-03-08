@@ -16,7 +16,7 @@ export const Container = styled.div`
     strong {
       font-size: 1.5rem;
       font-weight: 600;
-      color: ${({ theme }) => theme.colors.blueDark};
+      color: ${({ theme }) => theme.colors.title};
     }
 
     p {

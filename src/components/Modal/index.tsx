@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { Overlay, Container } from './styles';
 
 const Modal = () => {
-  const { level, closeModal } = useContext(ChallengesContext)
+  const { level, closeModal } = useContext(ChallengesContext);
 
   return (
     <Overlay>
@@ -18,7 +18,7 @@ const Modal = () => {
         </button>
       </Container>
     </Overlay>
-  )
-}
+  );
+};
 
 export default Modal;

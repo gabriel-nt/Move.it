@@ -10,7 +10,7 @@ const CompletedChallenges = () => {
       <span>Desafios completos</span>
       <span>{challengesCompleted}</span>
     </Container>
-  )
-}
+  );
+};
 
 export default CompletedChallenges;

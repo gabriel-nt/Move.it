@@ -1,58 +1,91 @@
-import Head from 'next/head';
-import { GetServerSideProps } from 'next';
-import { Container } from '../styles/pages/Home';
+import { useRouter } from 'next/router';
+import { FaGithub, FaArrowRight } from 'react-icons/fa';
 
-import Profile from '../components/Profile';
-import Countdown from '../components/Countdown';
-import ExperienceBar from '../components/ExperienceBar';
-import ChallengesBox from '../components/ChallengesBox';
-import CompletedChallenges from '../components/CompletedChallenges';
-import ContextProvider from 'hooks';
+import LogoImg from '../assets/logo.svg';
+import BackgroundImg from '../assets/background-home.svg';
 
-interface HomePageProps {
-  level: number;
-  currentExperience: number;
-  challengesCompleted: number;
-}
+import { Container, Content, Input, Github } from 'styles/pages/Index';
+import { useContext, useEffect, useState } from 'react';
+import { UserContext } from 'hooks/UserContext';
 
-const Home = (props: HomePageProps) => {
-  const { level, challengesCompleted, currentExperience } = props;
+const SignIn = () => {
+  const router = useRouter();
+  const { login } = useContext(UserContext);
+  const [name, setName] = useState('');
+  const [variant, setVariant] = useState('base');
+
+  useEffect(() => {
+    const user = localStorage.getItem('login');
+
+    if (user) {
+      setVariant('finish');
+
+      setTimeout(() => {
+        router.push('/home');
+      }, 300);
+    }
+  }, [router]);
+
+  const handleClick = () => {
+    fetch(`https://api.github.com/users/${name}`)
+      .then(resp => resp.json())
+      .then(function (data) {
+        login(data);
+        setVariant('finish');
+
+        setTimeout(() => {
+          router.push('/home');
+        }, 300);
+      });
+  };
 
   return (
-    <ContextProvider level={level} challengesCompleted={challengesCompleted} currentExperience={currentExperience}>
-      <Container>
-        <Head>
-          <title>Inicio | move.it</title>
-          <meta name="title" content="Move.it" />
-          <meta name="description" content="Move.it" />
-        </Head>
-        <ExperienceBar />
+    <Container
+      initial="base"
+      animate={variant}
+      transition={{ duration: 0.45 }}
+      variants={{
+        finish: { x: '-100%' },
+        base: {},
+      }}
+    >
+      <section>
+        <BackgroundImg />
 
-        <section>
-          <div>
-            <Profile />
-            <CompletedChallenges />
-            <Countdown />
-          </div>
-          <div>
-            <ChallengesBox />
-          </div>
-        </section>
-      </Container>
-    </ContextProvider>
+        <div className="content">
+          <Content
+            variants={{
+              show: { opacity: 1, y: '0' },
+              hidden: { opacity: 0, y: '-100%' },
+            }}
+            initial="hidden"
+            animate="show"
+            transition={{ duration: 0.7, ease: 'easeInOut' }}
+          >
+            <LogoImg />
+            <h1>Bem vindo</h1>
+
+            <Github>
+              <FaGithub />
+              <span>Faça login com seu Github para começar</span>
+            </Github>
+
+            <Input>
+              <input
+                type="text"
+                placeholder="Seu user do Github"
+                value={name}
+                onChange={e => setName(e.target.value)}
+              />
+              <button onClick={handleClick}>
+                <FaArrowRight />
+              </button>
+            </Input>
+          </Content>
+        </div>
+      </section>
+    </Container>
   );
-}
+};
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
-    }
-  }
-}
-
-export default Home;
+export default SignIn;

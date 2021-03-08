@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import theme from 'styles/theme/light';
 
 export const Container = styled.div`
   height: 100%;
   border-radius: 5px;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.content};
 
   text-align: center;
   padding: 1.5rem 2rem;
-  box-shadow: 0 0 60px rgba(0,0,0,0.05);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
 
   display: flex;
   align-items: center;
@@ -54,7 +53,7 @@ export const Container = styled.div`
       font-size: 1.25rem;
       padding: 0 2rem 1.5rem;
       color: ${({ theme }) => theme.colors.blueOne};
-      border-bottom: 1px solid ${({ theme }) => theme.colors.gray};
+      border-bottom: 1px solid ${({ theme }) => theme.colors.line};
     }
 
     main {
@@ -68,7 +67,7 @@ export const Container = styled.div`
         font-weight: 600;
         font-size: 2rem;
         margin: 1.5rem 0 1rem;
-        color: ${({ theme }) => theme.colors.blueDark};
+        color: ${({ theme }) => theme.colors.title};
       }
 
       p {
@@ -94,7 +93,7 @@ export const Container = styled.div`
         font-weight: 600;
         color: ${({ theme }) => theme.colors.white};
 
-        transition: filter .2s;
+        transition: filter 0.2s;
 
         &:first-of-type {
           background: ${({ theme }) => theme.colors.red};

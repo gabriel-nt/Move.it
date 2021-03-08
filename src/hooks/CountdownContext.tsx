@@ -9,13 +9,13 @@ interface CountdownContextData {
   hasFinished: boolean;
   isActive: boolean;
   handleStartCountdown: () => void;
-  resetCountdown: () => void
+  resetCountdown: () => void;
 }
 
 export const CountdownContext = createContext({} as CountdownContextData);
 
 export const CountdownProvider: React.FC = ({ children }) => {
-  const [time, setTime] = useState(25 * 60);
+  const [time, setTime] = useState(0.1 * 60);
   const [isActive, setIsActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
 
@@ -31,7 +31,7 @@ export const CountdownProvider: React.FC = ({ children }) => {
   function resetCountdown() {
     clearTimeout(countdownTimeout);
     setIsActive(false);
-    setTime(25 * 60);
+    setTime(0.1 * 60);
     setHasFinished(false);
   }
 
@@ -45,18 +45,20 @@ export const CountdownProvider: React.FC = ({ children }) => {
       setHasFinished(true);
       startNewChallenge();
     }
-  }, [isActive, time]);
-  
+  }, [isActive, time, startNewChallenge]);
+
   return (
-    <CountdownContext.Provider value={{
-      minutes,
-      seconds,
-      hasFinished,
-      isActive,
-      handleStartCountdown,
-      resetCountdown
-    }}>
-      { children }
+    <CountdownContext.Provider
+      value={{
+        minutes,
+        seconds,
+        hasFinished,
+        isActive,
+        handleStartCountdown,
+        resetCountdown,
+      }}
+    >
+      {children}
     </CountdownContext.Provider>
-  )
-}
+  );
+};

@@ -8,15 +8,16 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors.grayLight};
-    color: ${({ theme }) => theme.colors.grayDark};
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   body, input, textarea, button {
+    outline: none;
     font: 400 16px 'Inter', sans-serif;
   }
 
-  button {
+  button {        
     cursor: pointer;
   }
 

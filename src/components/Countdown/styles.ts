@@ -6,7 +6,7 @@ export const Container = styled.div`
   font-family: 'Rajdhani';
 
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.blueDark};
+  color: ${({ theme }) => theme.colors.title};
 
   div {
     flex: 1;
@@ -14,8 +14,8 @@ export const Container = styled.div`
     align-items: center;
 
     justify-content: space-evenly;
-    background: ${({ theme }) => theme.colors.white};
-    box-shadow: 0 0 60px rgba(0,0,0, 0.05);
+    background: ${({ theme }) => theme.colors.content};
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
 
     border-radius: 5px;
     font-size: 8.25rem;
@@ -25,11 +25,11 @@ export const Container = styled.div`
       flex: 1;
 
       &:first-child {
-        border-right: 1px solid #f0f1f3;
+        border-right: 1px solid ${({ theme }) => theme.colors.border};
       }
 
       &:last-child {
-        border-left: 1px solid #f0f1f3;
+        border-left: 1px solid ${({ theme }) => theme.colors.border};
       }
     }
   }
@@ -37,6 +37,18 @@ export const Container = styled.div`
   > span {
     font-size: 6.25rem;
     margin: 0 0.5rem;
+  }
+
+  @media (max-width: 468px) {
+    div {
+      span {
+        font-size: 6rem;
+      }
+    }
+
+    > span {
+      font-size: 5.25rem;
+    }
   }
 `;
 
@@ -57,7 +69,7 @@ export const Button = styled.button`
   font-size: 1.25rem;
   font-weight: 600;
 
-  transition: background .2s;
+  transition: background 0.2s;
 
   img {
     margin-left: 7px;
@@ -68,23 +80,31 @@ export const Button = styled.button`
   }
 
   &.button-active {
-    color: ${({ theme }) => theme.colors.grayDark};
+    color: ${({ theme }) => theme.colors.text};
     background: ${({ theme }) => theme.colors.white};
 
     &:not(:disabled):hover {
       background: ${({ theme }) => theme.colors.red};
       color: ${({ theme }) => theme.colors.white};
 
-      img {
-        color: ${({ theme }) => theme.colors.white};
+      & svg {
+        path {
+          fill: ${({ theme }) => theme.colors.white};
+        }
+      }
+    }
+
+    & svg {
+      path {
+        fill: ${({ theme }) => theme.colors.text};
       }
     }
   }
 
   &:disabled {
     cursor: not-allowed;
-    color: ${({ theme }) => theme.colors.grayDark};
-    background: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.title};
+    background: ${({ theme }) => theme.colors.content};
     border-bottom: 4px solid ${({ theme }) => theme.colors.green};
   }
 `;

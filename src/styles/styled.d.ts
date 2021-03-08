@@ -8,13 +8,14 @@ declare module 'styled-components' {
       blueTwo: string;
       green: string;
       red: string;
-      purple: string;
-      blueDark: string;
-      grayDark: string;      
-      gray: string;
-      grayLight: string;
+      textSecondary: string;
+      title: string;
+      text: string;
+      line: string;
+      background: string;
       white: string;
-      blueTwitter: string;
-    }
+      content: string;
+      border: string;
+    };
   }
 }

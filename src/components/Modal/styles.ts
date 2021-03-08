@@ -22,8 +22,8 @@ export const Container = styled.div`
 
   padding: 2rem 3rem;
   border-radius: 5px;
-  box-shadow: 0 0 60px rgba(0,0,0,0.05);
-  background: ${({ theme }) => theme.colors.white};
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+  background: ${({ theme }) => theme.colors.content};
 
   header {
     font-size: 8.75rem;
@@ -35,13 +35,13 @@ export const Container = styled.div`
 
   strong {
     font-size: 2.25rem;
-    color: ${({ theme }) => theme.colors.blueDark};
+    color: ${({ theme }) => theme.colors.title};
   }
 
   p {
     font-size: 1.25rem;
     margin-top: 0.25rem;
-    color: ${({ theme }) => theme.colors.gray};
+    color: ${({ theme }) => theme.colors.text};
   }
 
   button {

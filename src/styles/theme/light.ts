@@ -5,14 +5,15 @@ const theme = {
     blueTwo: '#4953B8',
     green: '#4CD62B',
     red: '#E83F5B',
-    purple: '#B2B9FF',
-    blueDark: '#2E384D',
-    grayDark: '#666666',
-    gray: '#DCDDE0',
-    grayLight: '#F2F3F5',
+    textSecondary: '#B2B9FF',
+    title: '#2E384D',
+    text: '#666666',
+    line: '#DCDDE0',
+    background: '#F2F3F5',
     white: '#FFFFFF',
-    blueTwitter: '#2AA9E0'
-  }
-}
+    content: '#FFFFFF',
+    border: '#F0F1F3',
+  },
+};
 
 export default theme;

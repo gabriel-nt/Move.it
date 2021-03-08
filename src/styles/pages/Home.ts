@@ -15,8 +15,27 @@ export const Container = styled.div`
     gap: 6.25rem;
     align-content: center;
   }
-`;
 
-export const LeftContainer = styled.div`
+  @media (max-width: 868px) {
+    section {
+      display: block;
 
+      > div {
+        max-width: 75%;
+        margin: 3rem auto;
+      }
+    }
+  }
+
+  @media (max-width: 668px) {
+    section > div {
+      max-width: 85%;
+    }
+  }
+
+  @media (max-width: 468px) {
+    section > div {
+      max-width: 100%;
+    }
+  }
 `;
